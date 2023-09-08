@@ -22,16 +22,12 @@ def mean_squared_error(X, y, beta):
     Calculate the mean squared error of the model
     :param X: Input data matrix
     :param y: Target vector
-    : beta: Estimated coefficient vector for the linear regression
+    :beta: Estimated coefficient vector for the linear regression
     :return: Mean squared error
     """
     ones = np.ones((len(X), 1))
     X = np.concatenate((ones, X), axis=1)
 
-    mse= np.mean((y-X*np.transpose(beta))**2)
+    mse= np.mean(((y-np.transpose(beta)*X))**2)
 
     return mse
-
-
-
-
