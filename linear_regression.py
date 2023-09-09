@@ -28,6 +28,6 @@ def mean_squared_error(X, y, beta):
     ones = np.ones((len(X), 1))
     X = np.concatenate((ones, X), axis=1)
 
-    mse= np.mean(((y-np.transpose(beta)*X))**2)
+    mse= np.mean(((y-np.dot(X,beta)))**2)
 
     return mse
