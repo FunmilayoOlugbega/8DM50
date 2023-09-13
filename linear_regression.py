@@ -1,3 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.spatial
+from collections import Counter
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from collections import defaultdict
+
 def lsq(X, y):
     """
     Least squares linear regression
